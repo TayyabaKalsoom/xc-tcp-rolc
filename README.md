@@ -1,5 +1,4 @@
-# XC-TCP revision package (ROLC, rank-ordered leader coverage)
-
+# ROLC
 Code, result files and converted data for the paper on rank-ordered leader coverage (ROLC) for explaining LambdaMART test-case rankings. Every table in the paper can be traced to a CSV in `results/aggregated/`.
 
 
