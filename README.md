@@ -26,13 +26,6 @@ python code\improve_corrected.py D:\xc\datasets D:\xc\imp_res 1500 <subjects...>
 python code\improve_ik25.py D:\xc\datasets D:\xc\ik_res <subjects...>          # set KERNEL=0 to skip KernelSHAP
 python code\convert_rtp.py <rtptorrent-dir> <out-dir>
 ```
-Subjects are the folder names such as `Angel-ML@angel`. `code\agg25.py` and `agg_*.py` turn raw JSON into the CSVs in `results/aggregated/`. Runs are single-threaded; times will differ by machine.
 
-## Things to know before submitting
-1. **User study.** Not part of this paper; left as future work.
-2. **Corrected ablation (Table 7, Fig 3)** was run on 16 of 25 subjects in the Claude workspace. Run `ablation_corr.py` on all subjects to match Table 5.
-3. **jOOQ** (RTPTorrent) raised an index error in the correction runs, so corrected RTPTorrent results cover 15 of 16 projects. Cause not yet found.
-4. **Reference numbers 42-47** are PLOS ONE papers that were checked only at title/abstract level; verify them before citing for specific claims.
-5. Items in [square brackets] in the paper (ethics approval for the new study, DOI, author contributions) must be completed.
 6. **RQ5 / Table 8** (fidelity for top-ranked and failing tests) uses all 25 subjects: `code/fidelity_where_it_matters.py` (needs `build_items.py`, `improve_corrected.py`, `run_tcpci.py` in the same folder), per-subject results in `results/aggregated/fidelity_where_it_matters_25.csv` and raw JSON in `results/raw_user_25_subject_runs/fw_res/`. `fidelity_where_it_matters_sandbox16.csv` is the earlier 16-subject check.
 7. Per-subject cosines are medians over subjects of per-subject means; the median across subjects is 0.921 (ROLC) and 0.987 (corrected).
